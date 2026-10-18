@@ -1,0 +1,8 @@
+# Example /etc/cron.d/homelab-tools (system crontab: includes the user column).
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+*/5 * * * * root /usr/local/bin/homelab-checks.sh
+0 6 * * * root /usr/local/bin/smart-check.sh
+
+# Existing root backup runs at 03:00. Its command was supplied truncated;
+# preserve the complete original separately before changing any schedule.

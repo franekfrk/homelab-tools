@@ -1,0 +1,10 @@
+[Unit]
+Description=Temperature Monitor for Minecraft Server and Safe Shutdown
+After=docker.service local-fs.target
+[Service]
+ExecStart=/usr/local/bin/temp-monitor.sh
+Restart=on-failure
+RestartSec=10
+User=root
+[Install]
+WantedBy=multi-user.target

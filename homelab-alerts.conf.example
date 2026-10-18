@@ -1,0 +1,26 @@
+# Trusted Bash configuration; root owns /etc/homelab-alerts.conf (mode 600).
+ENABLED=true
+WEBHOOK_URL=""  # Discord webhook: fill only in the private configuration.
+HC_URL=""       # Optional Healthchecks ping URL; leave empty to disable.
+MC_CONTAINER=minecraft
+MC_HOST=127.0.0.1
+MC_PORT=25565
+PIHOLE_CONTAINER=pihole
+PIHOLE_DNS_HOST=127.0.0.1
+DNS_TEST_NAME=example.com
+SMART_DEVICES=(/dev/sda /dev/sdb) # e.g. /dev/nvme0n1; adjust to your machine.
+STATE_DIR=/var/lib/homelab-alerts
+BATTERY_WARN=30
+BATTERY_SAVE=25
+BATTERY_SHUTDOWN=20
+TEMP_WARN=75
+TEMP_SAVE=70
+TEMP_SHUTDOWN=80
+DISK_WARN=85
+POLL_SECONDS=30
+SAVE_TIMEOUT=15
+STOP_TIMEOUT=30
+DOCKER_TIMEOUT=60
+# Optional hardware paths:
+# POWER_SUPPLY_ROOT=/sys/class/power_supply
+# THERMAL_ROOT=/sys/class/thermal

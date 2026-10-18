@@ -1,0 +1,11 @@
+# Local configuration and secrets
+homelab-alerts.conf
+*.local.conf
+.env
+.env.*
+!.env.example
+*.log
+state/
+__pycache__/
+*.pem
+*.key
